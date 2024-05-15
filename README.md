@@ -18,3 +18,18 @@
 - **onPause()**: Called when the activity is partially obscured by another activity. This is a good place to commit unsaved changes or pause ongoing processes.
 - **onStop()**: Called when the activity is no longer visible to the user.
 - **onDestroy()**: Called before the activity is destroyed. This is where you should release any resources that aren't needed anymore.
+
+## Fragment Lifecycle:
+* Fragments are reusable UI components within activities. They have their own lifecycle methods similar to activities
+- **onAttach()**: Attaches the fragment to its hosting activity.
+- **onCreate()**: Initializes the fragment.
+- **onCreateView()**: Creates the fragment's UI.
+- **onViewCreated()**: Called after onCreateView() to initialize UI components.
+- **onActivityCreated()**: Activity's onCreate() has completed; fragment's activity is fully initialized.
+- **onStart()**: Fragment becomes visible.
+- **onResume()**: Fragment starts interacting with the user.
+- **onPause()**: Fragment no longer interacts with the user.
+- **onStop()**: Fragment is no longer visible.
+- **onDestroyView()**: Removes the fragment's UI.
+- **onDestroy()**: Releases resources before the fragment is destroyed.
+- **onDetach()**: Detaches the fragment from its hosting activity.
