@@ -74,4 +74,26 @@ fun sortnumber (numbers: List<Int>): List<Int>{
 }
 
 ```
+## Remove Vowel in the string
+``` kotlin
+fun main() {
+    
+   var string = "Welcome to Parthibhan!.."
+ 
+    val result = removeVowels(string)
+    
+    println(result)
+      
+}
+
+fun removeVowels(string: String): String{
+    
+    val vowels = "aeiouAEIOU"
+    
+    return string.filter{
+        char-> char !in vowels
+    }
+}
+
+```
 
