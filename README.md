@@ -33,3 +33,45 @@
 - **onDestroyView()**: Removes the fragment's UI.
 - **onDestroy()**: Releases resources before the fragment is destroyed.
 - **onDetach()**: Detaches the fragment from its hosting activity.
+
+## Kotlin acesding order using for loops
+``` kotlin
+fun main(){
+    
+    val numbers = listOf(20, 18, 7, 10, 3, -12, 2, 1, -11, 15, -10, -5, -1, -19)
+    
+    val sortedNumbers = sortnumber(numbers)
+    
+    println(sortedNumbers)
+
+}
+
+fun sortnumber (numbers: List<Int>): List<Int>{
+    
+    val mutableNumbers = numbers.toMutableList()
+    
+    val n = mutableNumbers.size
+    
+    for (i in 0 until n -1 ){
+        
+       for (j in 0 until n - i - 1 ) {
+           
+           if (mutableNumbers[j] > mutableNumbers[j+1]){
+               
+               val temp = mutableNumbers[j]
+               
+              mutableNumbers[j] = mutableNumbers[j+1]
+
+              mutableNumbers[j +1] = temp
+               
+           }
+       }
+        
+    }
+    
+    return mutableNumbers
+    
+}
+
+```
+
