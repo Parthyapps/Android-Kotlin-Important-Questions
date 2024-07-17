@@ -34,6 +34,30 @@
 - **onDestroy()**: Releases resources before the fragment is destroyed.
 - **onDetach()**: Detaches the fragment from its hosting activity.
 
+## Android Context
+- Application Context
+- Activity Context
+- It allows us to access resources.
+- It allows us to interact with other Android components by sending messages.
+- It gives you information about your app environment.
+
+## Image Loading libraries
+- Picasso
+- Glide
+- Fresco
+- COIL (Coroutine Image Loader)
+- UIL (Universal Image Loader)
+
+## Kotlin 
+## kotlin coroutines
+- Coroutines are lightweight threads that allow us to execute concurrent code without blocking threads
+- it's essential to avoid blocking the main thread
+- A coroutine is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously
+- There are basically 3 scopes in Kotlin coroutines:
+- 1.Global Scope.
+- 2.LifeCycle Scope.
+- 3.ViewModel Scope
+
 ## Kotlin acesding order using for loops
 ``` kotlin
 fun main(){
