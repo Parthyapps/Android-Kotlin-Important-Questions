@@ -49,6 +49,7 @@
 - UIL (Universal Image Loader)
 
 ## Kotlin 
+    Kotlin is a modern cross platform programming language. introduced by jetbrain-11
 ## kotlin coroutines
 - Coroutines are lightweight threads that allow us to execute concurrent code without blocking threads
 - it's essential to avoid blocking the main thread
