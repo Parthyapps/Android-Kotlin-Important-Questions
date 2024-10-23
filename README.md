@@ -57,20 +57,21 @@
 - Kotlin provides three basic building blocks
     - launch, async and runBlocking
 - launch: is used to fire and forgot coroutine.
-- ```kotlin
-  import kotlinx.coroutines.*
-  fun main() {
-    GlobalScope.launch { 
-        delay(1000L) 
-        println("Hello from Coroutine!")
-    }
-    println("Hello from Main Thread!")
-    Thread.sleep(2000L)
-}```
--async is used when you need a result computed in a coroutine.
-- ``` kotlin
-          import kotlinx.coroutines.*
 
+  ```kotlin
+          import kotlinx.coroutines.*
+          fun main() {
+            GlobalScope.launch { 
+                delay(1000L) 
+                println("Hello from Coroutine!")
+            }
+            println("Hello from Main Thread!")
+            Thread.sleep(2000L)
+          }
+  ```
+ - async is used when you need a result computed in a coroutine.
+ ```kotlin
+    import kotlinx.coroutines.*
     fun main() {
     GlobalScope.launch {
         val result = async { 
@@ -80,11 +81,11 @@
     }
     Thread.sleep(2000L)
     }
-
     suspend fun computeResult(): Int {
     delay(1000L)
     return 42
-    } ```
+    }
+ ```
 - runBlocking is a bridge between non-coroutine world and coroutine world.
 -  ```kotlin
    import kotlinx.coroutines.*
@@ -105,7 +106,6 @@
 - Dispatchers.Default — for CPU-intensive tasks, like sorting large lists or doing complex computations.
   ``` kotlin
   import kotlinx.coroutines.*
-
     fun main() = runBlocking {
     launch(Dispatchers.IO) { 
         println("IO: ${Thread.currentThread().name}")
@@ -117,7 +117,7 @@
         println("Main: ${Thread.currentThread().name}")
     }
     }
-   
+
 - There are basically 3 scopes in Kotlin coroutines:
 - 1.Global Scope.
 - 2.LifeCycle Scope.
@@ -126,63 +126,39 @@
 ## Kotlin acesding order using for loops
 ``` kotlin
 fun main(){
-    
     val numbers = listOf(20, 18, 7, 10, 3, -12, 2, 1, -11, 15, -10, -5, -1, -19)
-    
     val sortedNumbers = sortnumber(numbers)
-    
     println(sortedNumbers)
-
 }
 
 fun sortnumber (numbers: List<Int>): List<Int>{
-    
     val mutableNumbers = numbers.toMutableList()
-    
     val n = mutableNumbers.size
-    
     for (i in 0 until n -1 ){
-        
        for (j in 0 until n - i - 1 ) {
-           
            if (mutableNumbers[j] > mutableNumbers[j+1]){
-               
                val temp = mutableNumbers[j]
-               
               mutableNumbers[j] = mutableNumbers[j+1]
-
               mutableNumbers[j +1] = temp
-               
            }
        }
-        
     }
-    
     return mutableNumbers
-    
 }
 
 ```
 ## Remove Vowel in the string
 ``` kotlin
 fun main() {
-    
    var string = "Welcome to Parthibhan!.."
- 
     val result = removeVowels(string)
-    
     println(result)
-      
 }
-
-fun removeVowels(string: String): String{
-    
+fun removeVowels(string: String): String{   
     val vowels = "aeiouAEIOU"
-    
     return string.filter{
         char-> char !in vowels
     }
 }
-
 ```
 
