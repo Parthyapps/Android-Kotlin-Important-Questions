@@ -52,7 +52,23 @@
 OkHttp: A powerful HTTP client that supports features like interceptors for handling custom headers and logging.
 Handling errors (e.g., network failures, HTTP status codes) and using try-catch or custom error handling mechanisms.
 
-  
+## Data Storage:
+- SharedPreferences: Simple key-value storage for saving small amounts of primitive data.
+- Room Database: Structured storage using SQL with support for complex queries.
+- SQLite: A database option for more manual management of structured data.
+
+## Dependency Injection:
+
+- Dagger 2: A compile-time dependency injection framework providing dependency management and injection with minimal runtime overhead.
+- Hilt: A simpler way to integrate Dagger 2, making it easier to set up and use in Android projects.
+- Koin: A lightweight dependency injection library for Kotlin that’s easy to learn and integrate.
+
+## Multithreading and Background Work:
+
+- Handler and Looper: Used for communicating between background threads and the main thread.
+- WorkManager: Manages background tasks that should run even if the app is closed or the device is rebooted.
+- Coroutines provide a modern approach to handle background work more efficiently compared to older methods like AsyncTask.
+    
 ## Android Context
 - Application Context
 - Activity Context
