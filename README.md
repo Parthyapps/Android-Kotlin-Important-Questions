@@ -34,6 +34,25 @@
 - **onDestroy()**: Releases resources before the fragment is destroyed.
 - **onDetach()**: Detaches the fragment from its hosting activity.
 
+## Jetpack Components:
+- ViewModel: Part of the Android Architecture Components. It is used to store and manage UI-related data in a lifecycle-aware manner, surviving configuration changes such as screen rotations.
+- LiveData: An observable data holder class that notifies UI components when data changes. It’s lifecycle-aware, meaning it only updates active observers.
+- Navigation Component: Simplifies the implementation of navigation between screens and supports features like deep linking and safe arguments.
+- WorkManager: Used for background tasks that need guaranteed execution, such as periodic data syncing.
+- Room: An abstraction layer over SQLite that handles database creation and management with type-safe access to database queries.
+- ViewBinding and DataBinding: ViewBinding is a simpler approach for binding views, while DataBinding allows more complex UI bindings, supporting data binding expressions in XML layouts.
+
+## RecyclerView
+- A more advanced and flexible version of ListView, used to display a large number of items efficiently.
+  Adapter and ViewHolder patterns are key concepts for recycling views and improving performance.
+  DiffUtil: Used for calculating the difference between two lists and updating only the items that have changed.
+
+## Networking
+- Retrofit: A type-safe HTTP client for Android used for making network requests and parsing responses using converters like Gson or Moshi.
+OkHttp: A powerful HTTP client that supports features like interceptors for handling custom headers and logging.
+Handling errors (e.g., network failures, HTTP status codes) and using try-catch or custom error handling mechanisms.
+
+  
 ## Android Context
 - Application Context
 - Activity Context
