@@ -39,6 +39,9 @@
 - ViewModel: Part of the Android Architecture Components. It is used to store and manage UI-related data in a lifecycle-aware manner, surviving configuration changes such as screen rotations.
 - LiveData: An observable data holder class that notifies UI components when data changes. It’s lifecycle-aware, meaning it only updates active observers.
 - Navigation Component: Simplifies the implementation of navigation between screens and supports features like deep linking and safe arguments.
+- Paging: A component that allows users to load and display large data sets with infinite scrolling
+- Jetpack Compose: A Kotlin-based toolkit for building native UI
+- Android KTX: A library that increases support for the Kotlin language for app development 
 - WorkManager: Used for background tasks that need guaranteed execution, such as periodic data syncing.
 - Room: An abstraction layer over SQLite that handles database creation and management with type-safe access to database queries.
 - ViewBinding and DataBinding: ViewBinding is a simpler approach for binding views, while DataBinding allows more complex UI bindings, supporting data binding expressions in XML layouts.
