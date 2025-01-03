@@ -18,6 +18,7 @@
 - **onPause()**: Called when the activity is partially obscured by another activity. This is a good place to commit unsaved changes or pause ongoing processes.
 - **onStop()**: Called when the activity is no longer visible to the user.
 - **onDestroy()**: Called before the activity is destroyed. This is where you should release any resources that aren't needed anymore.
+- **OnRestart()**: Called when the activity has been stopped and is restarting again.
 
 ## Fragment Lifecycle:
 * Fragments are reusable UI components within activities. They have their own lifecycle methods similar to activities
