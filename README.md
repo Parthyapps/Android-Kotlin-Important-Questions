@@ -21,7 +21,7 @@
 - **OnRestart()**: Called when the activity has been stopped and is restarting again.
 
 ## Fragment Lifecycle:
-* Fragments are reusable UI components within activities. They have their own lifecycle methods similar to activities
+ * Fragments are reusable UI components within activities. They have their own lifecycle methods similar to activities
 - **onAttach()**: Attaches the fragment to its hosting activity.
 - **onCreate()**: Initializes the fragment.
 - **onCreateView()**: Creates the fragment's UI.
@@ -36,15 +36,15 @@
 - **onDetach()**: Detaches the fragment from its hosting activity.
 
 ## Jetpack Components:
-- ViewModel: Part of the Android Architecture Components. It is used to store and manage UI-related data in a lifecycle-aware manner, surviving configuration changes such as screen rotations.
-- LiveData: An observable data holder class that notifies UI components when data changes. It’s lifecycle-aware, meaning it only updates active observers.
-- Navigation Component: Simplifies the implementation of navigation between screens and supports features like deep linking and safe arguments.
-- Paging: A component that allows users to load and display large data sets with infinite scrolling
-- Jetpack Compose: A Kotlin-based toolkit for building native UI
-- Android KTX: A library that increases support for the Kotlin language for app development 
-- WorkManager: Used for background tasks that need guaranteed execution, such as periodic data syncing.
-- Room: An abstraction layer over SQLite that handles database creation and management with type-safe access to database queries.
-- ViewBinding and DataBinding: ViewBinding is a simpler approach for binding views, while DataBinding allows more complex UI bindings, supporting data binding expressions in XML layouts.
+- **ViewModel**: Part of the Android Architecture Components. It is used to store and manage UI-related data in a lifecycle-aware manner, surviving configuration changes such as screen rotations.
+- **LiveData**: An observable data holder class that notifies UI components when data changes. It’s lifecycle-aware, meaning it only updates active observers.
+- **Navigation Component**: Simplifies the implementation of navigation between screens and supports features like deep linking and safe arguments.
+- **Paging**: A component that allows users to load and display large data sets with infinite scrolling
+- **Jetpack Compose**: A Kotlin-based toolkit for building native UI
+- **Android KTX**: A library that increases support for the Kotlin language for app development 
+- **WorkManager**: Used for background tasks that need guaranteed execution, such as periodic data syncing.
+- **Room**: An abstraction layer over SQLite that handles database creation and management with type-safe access to database queries.
+- **ViewBinding and DataBinding:** ViewBinding is a simpler approach for binding views, while DataBinding allows more complex UI bindings, supporting data binding expressions in XML layouts.
 
 ## RecyclerView
 - A more advanced and flexible version of ListView, used to display a large number of items efficiently.
@@ -73,9 +73,9 @@ Handling errors (e.g., network failures, HTTP status codes) and using try-catch 
 - WorkManager: Manages background tasks that should run even if the app is closed or the device is rebooted.
 - Coroutines provide a modern approach to handle background work more efficiently compared to older methods like AsyncTask.
     
-## Android Context
-- Application Context
-- Activity Context
+## Android Context Two types
+- 1.Application Context - need to access resources that are not tied to any specific activity, use the Application context.
+- 2.Activity Context - need to access resources that are tied to a specific activity, use the Activity context
 - It allows us to access resources.
 - It allows us to interact with other Android components by sending messages.
 - It gives you information about your app environment.
