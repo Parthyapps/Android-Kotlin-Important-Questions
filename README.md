@@ -50,6 +50,8 @@
 - A more advanced and flexible version of ListView, used to display a large number of items efficiently.
   Adapter and ViewHolder patterns are key concepts for recycling views and improving performance.
   DiffUtil: Used for calculating the difference between two lists and updating only the items that have changed.
+- Async Image Loading:Use image-loading libraries like Glide or Picasso to load images asynchronously, preventing UI freezes.
+- RecyclerView is a newer, more flexible option than ListView for displaying lists in Android apps.
 
 ## Networking
 - Retrofit: A type-safe HTTP client for Android used for making network requests and parsing responses using converters like Gson or Moshi.
