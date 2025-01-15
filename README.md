@@ -185,3 +185,15 @@ Use ViewModel, onSaveInstanceState(), or android:configChanges in the manifest t
 
     Runnable: Represents a task with no return value.
     Callable: Represents a task with a return value and can throw exceptions.
+
+FragmentManager Use Cases
+
+The FragmentManager handles:
+
+    Adding, replacing, or removing fragments.
+    Managing the back stack for fragment navigation.
+
+Get FragmentManager:
+
+    From an Activity: Use supportFragmentManager.
+    From a Fragment: Use parentFragmentManager or childFragmentManager (for nested fragments).
