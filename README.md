@@ -132,3 +132,56 @@ Handling errors (e.g., network failures, HTTP status codes) and using try-catch 
 - Fresco
 - COIL (Coroutine Image Loader)
 - UIL (Universal Image Loader)
+
+# Serializable:
+
+    Java-native interface.
+    Slower due to reflection.
+    Increases memory overhead.
+
+# Parcelable:
+
+    Android-specific.
+    Faster and optimized for IPC (Inter-Process Communication).
+    Requires manual implementation.
+
+# MVVM, MVC, MVP
+
+    MVC: Separates UI (View), Business Logic (Controller), and Data (Model).
+    MVP: Similar to MVC, but Presenter handles business logic and updates the View.
+    MVVM: ViewModel holds UI-related data and logic, and updates the View through LiveData/Flow.
+
+# Java Garbage Collection
+
+Java garbage collection is an automatic memory management process where unused objects are identified and removed to free memory, using techniques like mark-and-sweep.
+Pending Intent
+
+# Pending intend
+
+A PendingIntent is a tokenized intent that allows another application (e.g., a system service) to perform an action on behalf of your application. It's commonly used in notifications and alarms.
+
+MVVM, MVC, MVP
+
+    MVC: Separates UI (View), Business Logic (Controller), and Data (Model).
+    MVP: Similar to MVC, but Presenter handles business logic and updates the View.
+    MVVM: ViewModel holds UI-related data and logic, and updates the View through LiveData/Flow.
+
+# ViewModel Use and Features
+
+A ViewModel stores and manages UI-related data across configuration changes, ensuring lifecycle awareness and separation of concerns.
+Use ViewModel, onSaveInstanceState(), or android:configChanges in the manifest to handle configuration changes.
+
+# Doze and App Standby
+
+    Doze: Optimizes battery by deferring background tasks when the device is idle.
+    App Standby: Limits background activity for unused apps.
+
+# Git Merge and Git Rebase
+
+    Merge: Combines branches, preserving commit history.
+    Rebase: Reapplies commits from one branch onto another, creating a linear history.
+
+# Runnable vs Callable
+
+    Runnable: Represents a task with no return value.
+    Callable: Represents a task with a return value and can throw exceptions.
