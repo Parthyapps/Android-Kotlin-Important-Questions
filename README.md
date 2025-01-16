@@ -110,6 +110,7 @@ Handling errors (e.g., network failures, HTTP status codes) and using try-catch 
 ## Dependency Injection:
 
 - Dagger 2: A compile-time dependency injection framework providing dependency management and injection with minimal runtime overhead.
+- It's based on annotations and code generation.
 - Hilt: A simpler way to integrate Dagger 2, making it easier to set up and use in Android projects.
 - Koin: A lightweight dependency injection library for Kotlin that’s easy to learn and integrate.
 
@@ -186,14 +187,45 @@ Use ViewModel, onSaveInstanceState(), or android:configChanges in the manifest t
     Runnable: Represents a task with no return value.
     Callable: Represents a task with a return value and can throw exceptions.
 
-FragmentManager Use Cases
-
-The FragmentManager handles:
+# FragmentManager Use Cases
+# The FragmentManager handles:
 
     Adding, replacing, or removing fragments.
     Managing the back stack for fragment navigation.
 
-Get FragmentManager:
+# Get FragmentManager:
 
     From an Activity: Use supportFragmentManager.
     From a Fragment: Use parentFragmentManager or childFragmentManager (for nested fragments).
+
+# Room 
+Room is a SQLite-based persistence library in Android that provides an abstraction layer to make database operations easier, safer, and more efficient.
+
+Why Use Room?
+✅ Simplifies SQLite usage with clean APIs.
+✅ Provides compile-time checks for SQL queries.
+✅ Supports LiveData, Flow, and Coroutines for seamless UI updates.
+✅ Manages database versioning with migrations
+```
+@Entity
+data class User(
+    @PrimaryKey val id: Int,
+    val name: String,
+    val email: String
+)
+
+@Dao
+interface UserDao {
+    @Query("SELECT * FROM User")
+    fun getAllUsers(): List<User>
+
+    @Insert
+    fun insertUser(user: User)
+}
+
+@Database(entities = [User::class], version = 1)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun userDao(): UserDao
+}
+
+```
